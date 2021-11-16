@@ -1,6 +1,7 @@
 <?= $this->extend('template'); ?>
 <?= $this->section('content'); ?>
 
+
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
 
@@ -78,59 +79,41 @@
 
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Anggota Perpustakaan</h1>
+                <h1 class="h3 mb-0 text-gray-800">Edit Data Anggota Perpustakaan</h1>
 
             </div>
             <!-- /.content-header -->
             <div class="container">
-                <a href="/anggota/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data</a>
+
                 <div class="card mt-3">
                     <div class="card-header">
-                        Data Anggota
+                        Form Edit Data Anggota
                     </div>
                     <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped text-center">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">No.</th>
-                                        <th scope="col">ID Anggota</th>
-                                        <th scope="col">Nama</th>
-                                        <th scope="col">Jenis Kelamin</th>
-                                        <th scope="col">Alamat</th>
-                                        <th scope="col">No. HP</th>
-                                        <th scope="col">Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>AB001</td>
-                                        <td>Christofora Diana Yuliawati</td>
-                                        <td>Perempuan</td>
-                                        <td>Jl. Kemuning IV</td>
-                                        <td>082280144990</td>
-                                        <td align="center">
-                                            <a href="/anggota/edit" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
-                                            <a href="#" class="btn btn-sm btn-danger me-1"><i class="fas fa-trash"></i>Delete</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>AB002</td>
-                                        <td>Azahra Alya Hidayah</td>
-                                        <td>Perempuan</td>
-                                        <td>Jl. Ki Hajar Dewantara No 14</td>
-                                        <td>08576191004</td>
-                                        <td align="center">
-                                            <a href="/anggota/edit" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
-                                            <a href="#" class="btn btn-sm btn-danger me-1"><i class="fas fa-trash"></i>Delete</a>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">ID Anggota</label>
+                            <input type="text" class="form-control">
                         </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Nama</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput" class="form-label">Jenis Kelamin</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">Alamat</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="formGroupExampleInput2" class="form-label">No. HP</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Submit</button>
+
                     </div>
                 </div>
             </div>
@@ -144,4 +127,28 @@
         </div>
         <!-- End of Main Content -->
 
-        <?= $this->endSection(); ?>
+        <!-- Footer -->
+        <!-- <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Your Website 2021</span>
+                        </div>
+                    </div>
+                </footer> -->
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+
+
+<?= $this->endSection(); ?>

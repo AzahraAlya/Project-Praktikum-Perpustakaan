@@ -12,7 +12,7 @@ class Dashboard extends BaseController
 	public function anggota()
 	{
 		// session();
-		$data =[
+		$data = [
 			'validation' => \Config\Services::validation(),
 		];
 		return view('anggota/index', $data);
@@ -21,9 +21,17 @@ class Dashboard extends BaseController
 	public function tambah()
 	{
 		// session();
-		$data =[
+		$data = [
 			'validation' => \Config\Services::validation(),
 		];
 		return view('anggota/tambah', $data);
+	}
+
+	public function edit()
+	{
+		$data = [
+			'validation' => \Config\Services::validation(),
+		];
+		return view('anggota/edit', $data);
 	}
 }
