@@ -103,30 +103,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                <?php foreach ($anggota as $i => $agt) : ?>
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>AB001</td>
-                                        <td>Christofora Diana Yuliawati</td>
-                                        <td>Perempuan</td>
-                                        <td>Jl. Kemuning IV</td>
-                                        <td>082280144990</td>
+                                        <th scope="row"><?= $i + 1;?></th>
+                                        <td><?= $agt['id_anggota']; ?></td>
+                                        <td><?= $agt['nama']; ?></td>
+                                        <td><?= $agt['jenis_kelamin']; ?></td>
+                                        <td><?= $agt['alamat']; ?></td>
+                                        <td><?= $agt['no_hp']; ?></td>
                                         <td align="center">
-                                            <a href="/anggota/edit" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
-                                            <a href="#" class="btn btn-sm btn-danger me-1"><i class="fas fa-trash"></i>Delete</a>
+                                            <a href="/anggota/edit/<?= $agt['id'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
+                                            <form action="/anggota/delete/<?= $agt['id']; ?>" method="post" class="d-inline">
+                                                <input type="hidden" name = "_method" value = "DELETE" />
+                                                <button type ="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>
+                                            </form>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>AB002</td>
-                                        <td>Azahra Alya Hidayah</td>
-                                        <td>Perempuan</td>
-                                        <td>Jl. Ki Hajar Dewantara No 14</td>
-                                        <td>08576191004</td>
-                                        <td align="center">
-                                            <a href="/anggota/edit" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
-                                            <a href="#" class="btn btn-sm btn-danger me-1"><i class="fas fa-trash"></i>Delete</a>
-                                        </td>
-                                    </tr>
+                                    <?php endforeach; ?>
 
                                 </tbody>
                             </table>

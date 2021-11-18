@@ -34,7 +34,11 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Dashboard::index');
 $routes->get('/anggota', 'Dashboard::anggota');
 $routes->get('/anggota/tambah', 'Dashboard::tambah');
-$routes->get('/anggota/edit', 'Dashboard::edit');
+$routes->post('/anggota/store', 'Dashboard::store');
+$routes->get('/anggota/delete/(:any)', 'Dashboard::index');
+$routes->delete('/anggota/delete/(:any)', 'Dashboard::delete/$1');
+$routes->get('/anggota/edit/(:segment)', 'Dashboard::edit/$1');
+$routes->post('/anggota/update/(:segment)', 'Dashboard::update/$1');
 
 /*
  * --------------------------------------------------------------------

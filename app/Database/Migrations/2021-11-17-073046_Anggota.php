@@ -9,6 +9,12 @@ class Anggota extends Migration
 	public function up()
 	{
 		$this->forge->addField([
+			'id' => [
+				'type' => 'INT',
+				'constraint' => 11,
+				'unsigned' => true,
+				'auto_increment' => true,
+			],
 			'id_anggota' => [
 				'type' => 'VARCHAR',
 				'constraint' => 100,
@@ -28,10 +34,18 @@ class Anggota extends Migration
 			'no_hp' => [
 				'type' => 'VARCHAR',
 				'constraint' => 15
+			],
+			'created_at' =>[
+				'type' => 'DATETIME',
+				'null' => true
+			],
+			'updated_at' => [
+				'type' => 'DATETIME',
+				'null' => true
 			]
 		
 	]);
-	$this->forge->addKey('id_anggota', true);
+	$this->forge->addKey('id', true);
 	$this->forge->createTable('Anggota');
 	}
 
