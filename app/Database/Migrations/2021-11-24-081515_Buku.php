@@ -1,0 +1,48 @@
+<?php
+
+namespace App\Database\Migrations;
+
+use CodeIgniter\Database\Migration;
+
+class Buku extends Migration
+{
+	public function up()
+	{
+		$this->forge->addField([
+			'id' => [
+				'type' => 'INT',
+				'constraint' => 11,
+				'unsigned' => true,
+				'auto_increment' => true,
+			],
+			'kode_buku' => [
+				'type' => 'VARCHAR',
+				'constraint' => 50,
+			],
+			'judul_buku' => [
+				'type' => 'VARCHAR',
+				'constraint' => 50,
+			],
+			'penulis'=> [
+				'type' => 'VARCHAR',
+				'constraint' => 10,
+			],
+			'penerbit' => [
+				'type' => 'VARCHAR',
+				'constraint' => 100
+			],
+			'thn_terbit' => [
+				'type' => 'VARCHAR',
+				'constraint' => 15
+			],
+		
+	]);
+	$this->forge->addKey('id', true);
+	$this->forge->createTable('Buku');
+	}
+
+	public function down()
+	{
+		$this->forge->dropTable('Buku');
+	}
+}
