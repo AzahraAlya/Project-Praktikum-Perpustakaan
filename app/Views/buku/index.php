@@ -103,21 +103,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                <?php foreach ($buku as $i => $bk) : ?>
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>BK001</td>
-                                        <td>Software Engineering</td>
-                                        <td>Pressman</td>
-                                        <td>Erlangga</td>
-                                        <td>2001</td>
+                                        <th scope="row"><?= $i + 1;?></th>
+                                        <td><?= $bk['kode_buku']; ?></td>
+                                        <td><?= $bk['judul_buku']; ?></td>
+                                        <td><?= $bk['penulis']; ?></td>
+                                        <td><?= $bk['penerbit']; ?></td>
+                                        <td><?= $bk['thn_terbit']; ?></td>
                                         <td align="center">
-                                            <a href="/buku/edit/" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
-                                            <form action="#" method="post" class="d-inline">
-                                                <input type="hidden" name="_method" value="DELETE" />
-                                                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>
+                                            <a href="/buku/edit/<?= $bk['id'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
+                                            <form action="/buku/delete/<?= $bk['id']; ?>" method="post" class="d-inline">
+                                                <input type="hidden" name = "_method" value = "DELETE" />
+                                                <button type ="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>
                                             </form>
                                         </td>
                                     </tr>
+                                    <?php endforeach; ?>
 
                                 </tbody>
                             </table>

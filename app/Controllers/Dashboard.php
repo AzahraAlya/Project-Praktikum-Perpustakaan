@@ -95,14 +95,42 @@ class Dashboard extends BaseController
 	public function buku()
 	{
 
-		return view('buku/index');
+		$M_buku = model("M_buku");
+		
+		// session();
+		$data = [
+			'buku' => $M_buku->findAll(),
+			'validation' => \Config\Services::validation(),
+			
+		];
+		return view('buku/index', $data);
+	
 	}
 
 	public function tambahbuku()
 	{
 		// session();
 
-		return view('buku/tambah');
+		// session();
+		$data = [
+			'validation' => \Config\Services::validation(),
+		];
+		return view('buku/tambah', $data);
+	
+	}
+
+	public function storebuku(){
+		
+		$data = [
+			'kode_buku' => $this->request->getVar('kode_buku'),
+            'judul_buku' => $this->request->getVar('judul_buku'),
+            'penulis' => $this->request->getVar('penulis'),
+			'penerbit' => $this->request->getVar('penerbit'),
+			'thn_terbit' => $this->request->getVar('thn_terbit'),
+		];
+		$M_buku = model("M_buku");
+        $M_buku->insert($data);
+		return redirect()->to(base_url('/buku'));
 	}
 
 	public function editbuku()

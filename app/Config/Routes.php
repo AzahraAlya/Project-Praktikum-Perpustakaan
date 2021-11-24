@@ -42,7 +42,9 @@ $routes->post('/anggota/update/(:segment)', 'Dashboard::update/$1');
 
 $routes->get('/buku', 'Dashboard::buku');
 $routes->get('/buku/tambah', 'Dashboard::tambahbuku');
+$routes->post('/buku/store', 'Dashboard::storebuku');
 $routes->get('/buku/edit', 'Dashboard::editbuku');
+
 
 /*
  * --------------------------------------------------------------------
