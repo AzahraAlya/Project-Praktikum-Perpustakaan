@@ -90,10 +90,10 @@
                         Form Tambah Data Buku
                     </div>
                     <div class="card-body">
-                    <form action="/buku/storebuku" method="POST">
+                        <form action="/buku/storebuku" method="POST">
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Kode Buku</label>
-                                <input type="text" class="form-control" name=" " >
+                                <input type="text" class="form-control" name=" ">
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Judul Buku</label>
@@ -127,16 +127,6 @@
 
         </div>
         <!-- End of Main Content -->
-
-        <!-- Footer -->
-        <!-- <footer class="sticky-footer bg-white">
-                    <div class="container my-auto">
-                        <div class="copyright text-center my-auto">
-                            <span>Copyright &copy; Your Website 2021</span>
-                        </div>
-                    </div>
-                </footer> -->
-        <!-- End of Footer -->
 
     </div>
     <!-- End of Content Wrapper -->

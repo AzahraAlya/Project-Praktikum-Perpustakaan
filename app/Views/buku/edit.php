@@ -1,6 +1,7 @@
 <?= $this->extend('template'); ?>
 <?= $this->section('content'); ?>
 
+
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
 
@@ -78,50 +79,42 @@
 
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Data Buku</h1>
+                <h1 class="h3 mb-0 text-gray-800">Edit Data Buku</h1>
 
             </div>
             <!-- /.content-header -->
             <div class="container">
-                <a href="/buku/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data</a>
+
                 <div class="card mt-3">
                     <div class="card-header">
-                        Data Buku
+                        Form Edit Data Buku
                     </div>
                     <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped text-center">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">No.</th>
-                                        <th scope="col">Kode Buku</th>
-                                        <th scope="col">Judul Buku</th>
-                                        <th scope="col">Penulis</th>
-                                        <th scope="col">Penerbit</th>
-                                        <th scope="col">Tahun Terbit</th>
-                                        <th scope="col">Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>BK001</td>
-                                        <td>Software Engineering</td>
-                                        <td>Pressman</td>
-                                        <td>Erlangga</td>
-                                        <td>2001</td>
-                                        <td align="center">
-                                            <a href="/buku/edit/" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
-                                            <form action="#" method="post" class="d-inline">
-                                                <input type="hidden" name="_method" value="DELETE" />
-                                                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>
-                                            </form>
-                                        </td>
-                                    </tr>
+                        <form action="/buku/storebuku" method="POST">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Kode Buku</label>
+                                <input type="text" class="form-control" name=" ">
+                            </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Judul Buku</label>
+                                <input type="text" class="form-control" name=" ">
+                            </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Penulis</label>
+                                <input type="text" class="form-control" name=" ">
+                            </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Penerbit</label>
+                                <input type="text" class="form-control" name=" ">
+                            </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label">Tahun Terbit</label>
+                                <input type="text" class="form-control" name=" ">
+                            </div>
 
-                                </tbody>
-                            </table>
-                        </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -135,4 +128,18 @@
         </div>
         <!-- End of Main Content -->
 
-        <?= $this->endSection(); ?>
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+<!-- End of Page Wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+
+
+<?= $this->endSection(); ?>
