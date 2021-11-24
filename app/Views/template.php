@@ -64,7 +64,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
                         <a class="collapse-item" href="/anggota">Anggota</a>
-                        <a class="collapse-item" href="cards.html">Data Buku</a>
+                        <a class="collapse-item" href="/buku">Data Buku</a>
                     </div>
                 </div>
             </li>

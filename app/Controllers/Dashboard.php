@@ -89,4 +89,17 @@ class Dashboard extends BaseController
 		$M_anggota->delete($id);
 		return redirect()->to(base_url('/anggota'));
 	}
+
+	public function buku()
+	{
+		
+		return view('buku/index');
+	}
+
+	public function tambahbuku()
+	{
+		// session();
+	
+		return view('buku/tambah');
+	}
 }

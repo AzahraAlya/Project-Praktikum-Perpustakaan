@@ -40,6 +40,9 @@ $routes->delete('/anggota/delete/(:any)', 'Dashboard::delete/$1');
 $routes->get('/anggota/edit/(:segment)', 'Dashboard::edit/$1');
 $routes->post('/anggota/update/(:segment)', 'Dashboard::update/$1');
 
+$routes->get('/buku', 'Dashboard::buku');
+$routes->get('/buku/tambah', 'Dashboard::tambahbuku');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
