@@ -91,25 +91,25 @@
                     </div>
                     <div class="card-body">
                         <form action="/buku/update/<?= $buku['id']; ?>" method="POST">
-                            <div class="mb-3">
+                        <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Kode Buku</label>
-                                <input type="text" class="form-control" name=" ">
+                                <input type="text" class="form-control" name="kode_buku" value="<?= $buku['kode_buku']; ?>" readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Judul Buku</label>
-                                <input type="text" class="form-control" name=" ">
+                                <input type="text" class="form-control" name="judul_buku" value="<?= $buku['judul_buku']; ?>">
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Penulis</label>
-                                <input type="text" class="form-control" name=" ">
+                                <input type="text" class="form-control" name="penulis" value="<?= $buku['penulis']; ?>">
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Penerbit</label>
-                                <input type="text" class="form-control" name=" ">
+                                <input type="text" class="form-control" name="penerbit" value="<?= $buku['penerbit']; ?>">
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Tahun Terbit</label>
-                                <input type="text" class="form-control" name=" ">
+                                <input type="text" class="form-control" name="thn_terbit" value="<?= $buku['thn_terbit']; ?>">
                             </div>
 
                             <button type="submit" class="btn btn-primary">

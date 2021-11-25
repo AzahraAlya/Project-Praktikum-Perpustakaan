@@ -43,7 +43,10 @@ $routes->post('/anggota/update/(:segment)', 'Dashboard::update/$1');
 $routes->get('/buku', 'Dashboard::buku');
 $routes->get('/buku/tambah', 'Dashboard::tambahbuku');
 $routes->post('/buku/store', 'Dashboard::storebuku');
-$routes->get('/buku/edit', 'Dashboard::editbuku');
+$routes->get('/buku/edit/(:segment)', 'Dashboard::editbuku/$1');
+$routes->post('/buku/update/(:segment)', 'Dashboard::updatebuku/$1');
+$routes->get('/buku/delete/(:any)', 'Dashboard::index');
+$routes->delete('/buku/delete/(:any)', 'Dashboard::deletebuku/$1');
 
 
 /*

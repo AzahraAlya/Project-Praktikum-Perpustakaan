@@ -27,12 +27,16 @@ class Dashboard extends BaseController
 
 	public function tambah()
 	{
+		$M_anggota = model("M_anggota");
+		$id_anggota = $M_anggota->id_anggota();
 		// session();
 		$data = [
 			'validation' => \Config\Services::validation(),
+			'id_anggota' => $id_anggota,
 		];
 		return view('anggota/tambah', $data);
 	}
+
 
 
 	public function store()
@@ -110,13 +114,16 @@ class Dashboard extends BaseController
 	public function tambahbuku()
 	{
 		// session();
-
+		$M_buku = model("M_buku");
+		$kode_buku = $M_buku->kode_buku();
 		// session();
 		$data = [
 			'validation' => \Config\Services::validation(),
+			'kode_buku' => $kode_buku,
 		];
 		return view('buku/tambah', $data);
-	
+
+		
 	}
 
 	public function storebuku(){
@@ -133,10 +140,43 @@ class Dashboard extends BaseController
 		return redirect()->to(base_url('/buku'));
 	}
 
-	public function editbuku()
+	public function editbuku($id)
 	{
+		$M_buku = model("M_buku");
+		$data = [
+			'validation' => \Config\Services::validation(),
+			'buku' => $M_buku->getBuku($id),
+		];
+		return view('buku/edit', $data);
 		// session();
+	}
 
-		return view('buku/edit');
+	public function updatebuku($id)
+	{
+
+		$M_buku = model("M_buku");
+		// $request = \Config\Services::request();
+
+		// $slug = url_title($request->getVar('judul'), '-', true);
+		$M_buku->save([
+			'id' => $id,
+			'kode_buku' => $this->request->getVar('kode_buku'),
+			'judul_buku' => $this->request->getVar('judul_buku'),
+			'penulis' => $this->request->getVar('penulis'),
+			// 'slug' => $slug,
+			'penerbit' => $this->request->getVar('penerbit'),
+			'thn_terbit' => $this->request->getVar('thn_terbit'),
+
+		]);
+
+		return redirect()->to(base_url('/buku'));
+	}
+
+	public function deletebuku($id)
+	{
+
+		$M_buku = model("M_buku");
+		$M_buku->delete($id);
+		return redirect()->to(base_url('/buku'));
 	}
 }

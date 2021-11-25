@@ -93,7 +93,7 @@
                     <form action="/anggota/store" method="POST">
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">ID Anggota</label>
-                                <input type="text" class="form-control" name="id_anggota" >
+                                <input type="text" class="form-control" name="id_anggota" value="<?php echo $id_anggota?>" readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Nama</label>
@@ -101,7 +101,13 @@
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Jenis Kelamin</label>
-                                <input type="text" class="form-control" name="jenis_kelamin">
+                                
+                                    <select name="jenis_kelamin" class="form-control" required>
+                                        <option value="">-Pilih Jenis Kelamin-</option>
+                                        <option value="Laki-Laki">Laki-Laki</option>
+                                        <option value="Perempuan">Perempuan</option>
+                                    </select>
+                                
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Alamat</label>

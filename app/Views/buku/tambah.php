@@ -93,7 +93,7 @@
                         <form action="/buku/store" method="POST">
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Kode Buku</label>
-                                <input type="text" class="form-control" name="kode_buku">
+                                <input type="text" class="form-control" name="kode_buku" value = "<?php echo $kode_buku ?> " readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Judul Buku</label>

@@ -13,6 +13,24 @@ class M_anggota extends Model
 	protected $useTimestamps        = true;
 
 
+
+    public function id_anggota(){
+		$kode = $this->db->table('anggota')
+		->select('RIGHT(id_anggota,3) as id_anggota', false)
+		->orderBy('id_anggota', 'DESC')
+		->limit(1)->get()->getRowArray();
+
+		if($kode['id_anggota']==null){
+			$no = 1;
+		}else{
+			$no = intval($kode['id_anggota']) + 1;
+		}
+
+		$tgl = 'AB';
+		$batas = str_pad($no, 3, "0", STR_PAD_LEFT);
+		$id_anggota = $tgl.$batas;
+		return $id_anggota;
+	}
     // public function id_anggota(){
 
     //     $query = $this->db->table('anggota')

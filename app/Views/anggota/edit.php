@@ -94,7 +94,7 @@
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">ID Anggota</label>
-                                <input type="text" class="form-control" id= "id_anggota" name = "id_anggota" autofocus value="<?= $anggota['id_anggota']; ?>">
+                                <input type="text" class="form-control" id= "id_anggota" name = "id_anggota" autofocus value="<?= $anggota['id_anggota']; ?>" readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Nama</label>
@@ -102,11 +102,24 @@
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Jenis Kelamin</label>
-                                <input type="text" class="form-control" id= "jenis_kelamin" name = "jenis_kelamin" autofocus value="<?= $anggota['jenis_kelamin']; ?>">
+
+                                <select name="jenis_kelamin" class="form-control" required>
+                                    <?php 
+                                    if($anggota['jenis_kelamin'] == "Laki-Laki"){ ?>
+                                        <option value="Laki-Laki" selected>Laki-Laki</option>
+                                        <option value="Perempuan">Perempuan</option>
+                                    <?php }else{ ?>
+                                        <option value="Laki-Laki">Laki-Laki</option>
+                                        <option value="Perempuan" selected>Perempuan</option>
+                                    <?php }
+                           
+                            ?>
+                       </select>
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Alamat</label>
                                 <input type="text" class="form-control" id= "alamat" name = "alamat" autofocus value="<?= $anggota['alamat']; ?>">
+                                
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">No. HP</label>
