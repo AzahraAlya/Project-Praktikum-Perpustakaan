@@ -90,7 +90,7 @@
                         Form Edit Data Anggota
                     </div>
                     <div class="card-body">
-                    <form action="/anggota/update/<?= $anggota['id']; ?>" method="POST">  
+                    <form action="/anggota/update/<?= $anggota['id_a']; ?>" method="POST">  
                         <div class="card-body">
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">ID Anggota</label>

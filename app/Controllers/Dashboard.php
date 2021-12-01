@@ -74,7 +74,7 @@ class Dashboard extends BaseController
 
 		// $slug = url_title($request->getVar('judul'), '-', true);
 		$M_anggota->save([
-			'id' => $id,
+			'id_a' => $id,
 			'id_anggota' => $this->request->getVar('id_anggota'),
 			'nama' => $this->request->getVar('nama'),
 			'jenis_kelamin' => $this->request->getVar('jenis_kelamin'),
@@ -159,7 +159,7 @@ class Dashboard extends BaseController
 
 		// $slug = url_title($request->getVar('judul'), '-', true);
 		$M_buku->save([
-			'id' => $id,
+			'id_b' => $id,
 			'kode_buku' => $this->request->getVar('kode_buku'),
 			'judul_buku' => $this->request->getVar('judul_buku'),
 			'penulis' => $this->request->getVar('penulis'),

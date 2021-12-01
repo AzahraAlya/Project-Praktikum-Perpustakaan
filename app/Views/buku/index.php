@@ -112,8 +112,8 @@
                                         <td><?= $bk['penerbit']; ?></td>
                                         <td><?= $bk['thn_terbit']; ?></td>
                                         <td align="center">
-                                            <a href="/buku/edit/<?= $bk['id'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
-                                            <form action="/buku/delete/<?= $bk['id']; ?>" method="post" class="d-inline">
+                                            <a href="/buku/edit/<?= $bk['id_b'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
+                                            <form action="/buku/delete/<?= $bk['id_b']; ?>" method="post" class="d-inline">
                                                 <input type="hidden" name = "_method" value = "DELETE" />
                                                 <button type ="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>
                                             </form>

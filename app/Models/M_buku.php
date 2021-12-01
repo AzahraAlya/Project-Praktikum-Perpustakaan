@@ -8,7 +8,7 @@ class M_buku extends Model
 {
 
     protected $table                = 'buku';
-	protected $primaryKey           = 'id';
+	protected $primaryKey           = 'id_b';
 	protected $allowedFields        = ['kode_buku','judul_buku','penulis','penerbit','thn_terbit','created_at','updated_at'];
 	protected $useTimestamps        = true;
 
@@ -37,7 +37,7 @@ class M_buku extends Model
 			return $this->findAll();
 		}
 
-		return $this->where(['id'=> $id]) -> first();
+		return $this->where(['id_b'=> $id]) -> first();
 	}
     
 }

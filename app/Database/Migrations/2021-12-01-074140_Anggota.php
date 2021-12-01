@@ -4,34 +4,34 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Buku extends Migration
+class Anggota extends Migration
 {
 	public function up()
 	{
 		$this->forge->addField([
-			'id' => [
+			'id_a' => [
 				'type' => 'INT',
 				'constraint' => 11,
 				'unsigned' => true,
 				'auto_increment' => true,
 			],
-			'kode_buku' => [
+			'id_anggota' => [
+				'type' => 'VARCHAR',
+				'constraint' => 100,
+			],
+			'nama' => [
 				'type' => 'VARCHAR',
 				'constraint' => 50,
 			],
-			'judul_buku' => [
-				'type' => 'VARCHAR',
-				'constraint' => 50,
-			],
-			'penulis'=> [
+			'jenis_kelamin'=> [
 				'type' => 'VARCHAR',
 				'constraint' => 10,
 			],
-			'penerbit' => [
+			'alamat' => [
 				'type' => 'VARCHAR',
 				'constraint' => 100
 			],
-			'thn_terbit' => [
+			'no_hp' => [
 				'type' => 'VARCHAR',
 				'constraint' => 15
 			],
@@ -45,12 +45,12 @@ class Buku extends Migration
 			]
 		
 	]);
-	$this->forge->addKey('id', true);
-	$this->forge->createTable('Buku');
+	$this->forge->addKey('id_a', true);
+	$this->forge->createTable('Anggota');
 	}
 
 	public function down()
 	{
-		$this->forge->dropTable('Buku');
+		$this->forge->dropTable('Anggota');
 	}
 }

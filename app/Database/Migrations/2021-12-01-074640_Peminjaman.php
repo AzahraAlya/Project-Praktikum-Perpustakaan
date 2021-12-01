@@ -4,36 +4,34 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Anggota extends Migration
+class Peminjaman extends Migration
 {
 	public function up()
 	{
 		$this->forge->addField([
-			'id' => [
+			'id_p' => [
 				'type' => 'INT',
 				'constraint' => 11,
 				'unsigned' => true,
 				'auto_increment' => true,
 			],
-			'id_anggota' => [
+			'id_peminjaman' => [
 				'type' => 'VARCHAR',
 				'constraint' => 100,
 			],
-			'nama' => [
-				'type' => 'VARCHAR',
-				'constraint' => 50,
+			'id_a' => [
+				'type' => 'INT',
+				'constraint' => 11,
 			],
-			'jenis_kelamin'=> [
-				'type' => 'VARCHAR',
-				'constraint' => 10,
+			'id_b' => [
+				'type' => 'INT',
+				'constraint' => 11,
 			],
-			'alamat' => [
-				'type' => 'VARCHAR',
-				'constraint' => 100
+			'tgl_pinjam'=> [
+				'type' => 'DATE',
 			],
-			'no_hp' => [
-				'type' => 'VARCHAR',
-				'constraint' => 15
+			'tgl_kembali' => [
+				'type' => 'DATE',
 			],
 			'created_at' =>[
 				'type' => 'DATETIME',
@@ -45,12 +43,12 @@ class Anggota extends Migration
 			]
 		
 	]);
-	$this->forge->addKey('id', true);
-	$this->forge->createTable('Anggota');
+	$this->forge->addKey('id_p', true);
+	$this->forge->createTable('Peminjaman');
 	}
 
 	public function down()
 	{
-		$this->forge->dropTable('Anggota');
+		$this->forge->dropTable('Peminjaman');
 	}
 }

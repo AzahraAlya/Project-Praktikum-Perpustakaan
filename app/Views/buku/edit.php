@@ -90,7 +90,7 @@
                         Form Edit Data Buku
                     </div>
                     <div class="card-body">
-                        <form action="/buku/update/<?= $buku['id']; ?>" method="POST">
+                        <form action="/buku/update/<?= $buku['id_b']; ?>" method="POST">
                         <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Kode Buku</label>
                                 <input type="text" class="form-control" name="kode_buku" value="<?= $buku['kode_buku']; ?>" readonly>

@@ -8,7 +8,7 @@ class M_anggota extends Model
 {
 
     protected $table                = 'anggota';
-	protected $primaryKey           = 'id';
+	protected $primaryKey           = 'id_a';
 	protected $allowedFields        = ['id_anggota','nama','jenis_kelamin','alamat','no_hp','created_at', 'updated_at'];
 	protected $useTimestamps        = true;
 
@@ -64,7 +64,7 @@ class M_anggota extends Model
 			return $this->findAll();
 		}
 
-		return $this->where(['id'=> $id]) -> first();
+		return $this->where(['id_a'=> $id]) -> first();
 	}
     
 }
