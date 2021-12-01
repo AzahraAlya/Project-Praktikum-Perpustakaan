@@ -103,8 +103,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                
-
+                                    <?php foreach ($pinjam as $i => $pj) : ?>
+                                    <tr>
+                                        <th scope="row"><?= $i + 1;?></th>
+                                        <td><?= $pj['id_peminjaman']; ?></td>
+                                        <td><?= $pj['id_a']; ?></td>
+                                        <td><?= $pj['id_b']; ?></td>
+                                        <td><?= $pj['tgl_pinjam']; ?></td>
+                                        <td><?= $pj['tgl_kembali']; ?></td>
+                                        <td align="center">
+                                            <a href="/anggota/edit/<?= $pj['id_p'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
+                                            <form action="/anggota/delete/<?= $pj['id_p']; ?>" method="post" class="d-inline">
+                                                <input type="hidden" name = "_method" value = "DELETE" />
+                                                <button type ="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>

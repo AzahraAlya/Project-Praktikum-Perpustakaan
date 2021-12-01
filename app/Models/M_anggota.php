@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class M_anggota extends Model
 {
 
-    protected $table                = 'anggota';
+  protected $table                = 'anggota';
 	protected $primaryKey           = 'id_a';
 	protected $allowedFields        = ['id_anggota','nama','jenis_kelamin','alamat','no_hp','created_at', 'updated_at'];
 	protected $useTimestamps        = true;
