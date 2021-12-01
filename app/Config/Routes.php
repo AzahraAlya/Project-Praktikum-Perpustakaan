@@ -48,6 +48,8 @@ $routes->post('/buku/update/(:segment)', 'Dashboard::updatebuku/$1');
 $routes->get('/buku/delete/(:any)', 'Dashboard::index');
 $routes->delete('/buku/delete/(:any)', 'Dashboard::deletebuku/$1');
 
+$routes->get('/peminjaman', 'Peminjaman::index');
+
 
 /*
  * --------------------------------------------------------------------

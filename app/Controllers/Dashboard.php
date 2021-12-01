@@ -174,7 +174,6 @@ class Dashboard extends BaseController
 
 	public function deletebuku($id)
 	{
-
 		$M_buku = model("M_buku");
 		$M_buku->delete($id);
 		return redirect()->to(base_url('/buku'));
