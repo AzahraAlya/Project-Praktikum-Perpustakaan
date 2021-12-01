@@ -10,4 +10,10 @@ class Peminjaman extends BaseController
 	{
 		return view('peminjaman/index');
 	}
+
+	public function tambah()
+	{
+		// session();
+		return view('peminjaman/tambah');
+	}
 }
