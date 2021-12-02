@@ -93,6 +93,7 @@
                             <table class="table table-striped text-center">
                                 <thead>
                                     <tr>
+                                    <th scope="col">NO</th>
                                         <th scope="col">Id Peminjaman</th>
                                         <th scope="col">Peminjam</th>
                                         <th scope="col">Judul Buku</th>
@@ -103,20 +104,33 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($pinjam as $i => $pj) : ?>
+                                    <?php foreach ($pinjam as $i => $pj) :
+                                            
+                                        $tgl_kembali = new DateTime($pj->tgl_kembali);
+                                        $tgl_sekarang = new DateTime();
+                                        $selisih = $tgl_sekarang->diff($tgl_kembali)->format("%a");
+                                        
+                                    ?> 
                                     <tr>
                                         <th scope="row"><?= $i + 1;?></th>
-                                        <td><?= $pj['id_peminjaman']; ?></td>
-                                        <td><?= $pj['id_a']; ?></td>
-                                        <td><?= $pj['id_b']; ?></td>
-                                        <td><?= $pj['tgl_pinjam']; ?></td>
-                                        <td><?= $pj['tgl_kembali']; ?></td>
+                                        <td><?= $pj->id_peminjaman; ?></td>
+                                        <td><?= $pj->nama; ?></td>
+                                        <td><?= $pj->judul_buku; ?></td>
+                                        <td><?= $pj->tgl_pinjam; ?></td>
+                                        <td><?= $pj->tgl_kembali; ?></td>
+                                        <td>
+                                                <?php 
+                                                if($tgl_kembali >= $tgl_sekarang OR $selisih == 0){
+                                                    echo "<span class='badge bg-warning'>Belom di Kembalikan </span>";
+                                                }else{
+                                                    echo "Telat <b style = 'color:red;'>".$selisih."</b> Hari <br> <span class='badge bg-danger'> Denda Perhari = 1.000";
+                                                }
+                                            
+                                            ?>
+                                        </td>
                                         <td align="center">
-                                            <a href="/anggota/edit/<?= $pj['id_p'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
-                                            <form action="/anggota/delete/<?= $pj['id_p']; ?>" method="post" class="d-inline">
-                                                <input type="hidden" name = "_method" value = "DELETE" />
-                                                <button type ="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>
-                                            </form>
+                                           
+                                                <a href="<?= base_url('peminjaman/kembalikan')?>/<?= $pj->id_peminjaman;?>" class="btn btn-primary btn-xs" onclick="return confirm('Yakin Buku ini mau di Kembalikan ?');"> Kembalikan</a>
                                         </td>
                                     </tr>
                                     <?php endforeach; ?>

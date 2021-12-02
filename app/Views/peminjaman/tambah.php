@@ -1,9 +1,9 @@
 <?= $this->extend('template'); ?>
 <?= $this->section('content'); ?>
 <?php
-$tgl_pinjam = date('Y-m-d');
-$tujuan_hari = mktime(0, 0, 0, date("n"), date("j") + 7, date("Y"));
-$tgl_kembali = date('Y-m-d', $tujuan_hari);
+    $tgl_pinjam = date('Y-m-d');
+    $tujuan_hari = mktime(0,0,0,date("n"),date("j") + 7, date("Y"));
+    $tgl_kembali = date('Y-m-d',$tujuan_hari);
 ?>
 
 <!-- Content Wrapper -->
@@ -97,22 +97,26 @@ $tgl_kembali = date('Y-m-d', $tujuan_hari);
                         <form action="/peminjaman/store" method="POST">
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">ID Peminjaman</label>
-                                <input type="text" class="form-control" name="" value="" readonly>
+                                <input type="text" class="form-control" name="id_peminjaman" value = "<?= $id_peminjaman ?> " readonly>
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Peminjam</label>
-                                <select name="jenis_kelamin" class="form-control" required>
+                                <select name="id_a" class="form-control" required>
                                     <option value="">-Pilih Peminjam-</option>
-                                    <option value="">Azahra Alya</option>
-                                    <option value="">Christofora Diana</option>
+                                    <?php
+                                        foreach($peminjam as $data){?>
+                                            <option value="<?= $data['id_a'];?>"><?= $data['nama'];?></option>   
+                                        <?php }?>
                                 </select>
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Buku</label>
-                                <select name="jenis_kelamin" class="form-control" required>
+                                <select name="id_b" class="form-control" required>
                                     <option value="">-Pilih Buku-</option>
-                                    <option value="">Software Engineering</option>
-                                    <option value="">Matematika</option>
+                                    <?php
+                                        foreach($buku as $data){?>
+                                            <option value="<?= $data['id_b'];?>"><?= $data['judul_buku'];?></option>   
+                                        <?php }?>
                                 </select>
                             </div>
                             <div class="mb-3">
