@@ -79,7 +79,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
                         <a class="collapse-item" href="/peminjaman">Peminjaman</a>
-                        <a class="collapse-item" href="utilities-border.html">Pengembalian</a>
+                        <a class="collapse-item" href="/pengembalian">Pengembalian</a>
                         <!-- <a class="collapse-item" href="utilities-animation.html">Animations</a>
                         <a class="collapse-item" href="utilities-other.html">Other</a> -->
                     </div>

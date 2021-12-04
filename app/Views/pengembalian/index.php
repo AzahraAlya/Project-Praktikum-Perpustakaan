@@ -78,15 +78,15 @@
 
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Peminjaman</h1>
+                <h1 class="h3 mb-0 text-gray-800">Pengembalian</h1>
 
             </div>
             <!-- /.content-header -->
             <div class="container">
-                <a href="/peminjaman/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Peminjaman</a>
+                <!-- <a href="/peminjaman/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data</a> -->
                 <div class="card mt-3">
                     <div class="card-header">
-                        Data Peminjaman
+                        Data Pengembalian
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -99,41 +99,11 @@
                                         <th scope="col">Judul Buku</th>
                                         <th scope="col">Tanggal Pinjam</th>
                                         <th scope="col">Tanggal Kembali</th>
-                                        <th scope="col">Status</th>
-                                        <th scope="col">Aksi</th>
+                                        <th scope="col">Tanggal Dikembalikan</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($pinjam as $i => $pj) :
-                                            
-                                        $tgl_kembali = new DateTime($pj->tgl_kembali);
-                                        $tgl_sekarang = new DateTime();
-                                        $selisih = $tgl_sekarang->diff($tgl_kembali)->format("%a");
-                                        
-                                    ?> 
-                                    <tr>
-                                        <th scope="row"><?= $i + 1;?></th>
-                                        <td><?= $pj->id_peminjaman; ?></td>
-                                        <td><?= $pj->nama; ?></td>
-                                        <td><?= $pj->judul_buku; ?></td>
-                                        <td><?= $pj->tgl_pinjam; ?></td>
-                                        <td><?= $pj->tgl_kembali; ?></td>
-                                        <td>
-                                                <?php 
-                                                if($tgl_kembali >= $tgl_sekarang OR $selisih == 0){
-                                                    echo "<span class='badge bg-warning'>Belom di Kembalikan </span>";
-                                                }else{
-                                                    echo "Telat <b style = 'color:red;'>".$selisih."</b> Hari <br> <span class='badge bg-danger'> Denda Perhari = 1.000";
-                                                }
-                                            
-                                            ?>
-                                        </td>
-                                        <td align="center">
-                                           
-                                                <a href="<?= base_url('peminjaman/kembalikan')?>/<?= $pj->id_peminjaman;?>" class="btn btn-primary btn-xs" onclick="return confirm('Yakin Buku ini mau di Kembalikan ?');"> Kembalikan</a>
-                                        </td>
-                                    </tr>
-                                    <?php endforeach; ?>
+                                    
                                 </tbody>
                             </table>
                         </div>
