@@ -82,34 +82,6 @@
 
             </div>
             <!-- /.content-header -->
-            <div class="container">
-                <!-- <a href="/peminjaman/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data</a> -->
-                <div class="card mt-3">
-                    <div class="card-header">
-                        Data Pengembalian
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped text-center">
-                                <thead>
-                                    <tr>
-                                    <th scope="col">NO</th>
-                                        <th scope="col">Id Peminjaman</th>
-                                        <th scope="col">Peminjam</th>
-                                        <th scope="col">Judul Buku</th>
-                                        <th scope="col">Tanggal Pinjam</th>
-                                        <th scope="col">Tanggal Kembali</th>
-                                        <th scope="col">Tanggal Dikembalikan</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <!-- Content Row -->
             <div class="row">
 
