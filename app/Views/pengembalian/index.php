@@ -82,6 +82,45 @@
 
             </div>
             <!-- /.content-header -->
+            <div class="container">
+                <div class="card mt-3">
+                    <div class="card-header">
+                        Data Peminjaman
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped text-center">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NO</th>
+                                        <th scope="col">Peminjam</th>
+                                        <th scope="col">Judul Buku</th>
+                                        <th scope="col">Tanggal Pinjam</th>
+                                        <th scope="col">Tanggal Kembali</th>
+                                        <th scope="col">Tanggal Pengembalian</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"></th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>
+
+                                        </td>
+                                        <td align="center">
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- Content Row -->
             <div class="row">
 
