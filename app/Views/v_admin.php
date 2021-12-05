@@ -120,7 +120,12 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         Data Buku</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">15</div>
+                                        <?php $j;?>
+                                        <?php foreach ($buku as $j => $bk) : 
+                                            $j++;
+                                            endforeach;
+                                            ?>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $j; ?></div>
                                 </div>
                                 <div class="col-auto">
                                     <i class="fas fa-book fa-2x text-gray-300"></i>
@@ -138,14 +143,17 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Peminjaman
                                     </div>
+                                    <?php $k;?>
+                                        <?php foreach ($pinjam as $k => $pj) : 
+                                            $k++;
+                                            endforeach;
+                                            ?>
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-auto">
-                                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">5</div>
+                                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $k; ?></div>
                                         </div>
-                                        <div class="col">
-                                            <div class="progress progress-sm mr-2">
-                                                <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
+                                        <div class="col-auto">
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -165,13 +173,24 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                         Pengembalian</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                        <?php $l;?>
+                                        <?php foreach ($kembali as $l => $km) : 
+                                            $l++;
+                                            endforeach;
+                                            ?>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $l; ?></div>
                                 </div>
                                 <div class="col-auto">
                                     <i class="fas fa-arrow-down fa-2x text-gray-300"></i>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="bodyx">
+                    <div class="divx">Selamat Datang</div> 
+                    <div class = "divx"> 
+                    <span class ="spanx">Sistem Perpustakaan</span>
                     </div>
                 </div>
             </div>

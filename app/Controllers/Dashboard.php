@@ -10,8 +10,14 @@ class Dashboard extends BaseController
 	public function index()
 	{
 		$M_anggota = model("M_anggota");
+		$M_buku = model("M_buku");
+		$M_pinjam = model("M_pinjam");
+		$M_kembali = model("M_kembali");
 		$data = [
 		'anggota' => $M_anggota->findAll(),
+		'buku' => $M_buku->findAll(),
+		'pinjam' => $M_pinjam->findAll(),
+		'kembali' => $M_kembali->findAll(),
 	];
 		return view('v_admin', $data);
 	}
