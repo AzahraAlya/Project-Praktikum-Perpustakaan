@@ -59,10 +59,27 @@ class M_pinjam extends Model
 		
     }
 
-	public function jumlah_buku($id){
+	// public function jumlah_buku($id){
 
-        $kode = $this->db->table('jumlah')->select('buku')->where('id_b', $id)->get()->getRowArray();
-        return $kode;
+    //     $kode = $this->db->table('jumlah')->select('buku')->where('id_b', $id)->get()->getRowArray();
+    //     return $kode;
+    // }
+
+	public function getDataById_p($id){
+        $query = $this->db->table('peminjaman')->select('*')
+		->join('anggota', 'peminjaman.id_a = anggota.id_a')
+		->join('buku', 'peminjaman.id_b = buku.id_b')
+        ->where('peminjaman.id_p',$id)->get()->getRow();
+        return $query;
+    }
+
+	public function deletePm($id)
+    {
+        //$this->db->where('id_p', $id)->delete('peminjaman');
+		$db      = \Config\Database::connect();
+		$builder = $db->table('peminjaman');
+		$builder->where('id_p', $id);
+		$builder->delete();
     }
     
 }

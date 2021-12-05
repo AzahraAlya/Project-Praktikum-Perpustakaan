@@ -55,7 +55,36 @@ class C_Peminjaman extends BaseController
 
 	public function jumlah_buku(){
         $id = $this->input->post('id');
-        $pinjam =$this->m_peminjaman->jumlah_buku($id);
+        $pinjam =$this->M_pinjam->jumlah_buku($id);
         echo json_encode($pinjam);
+    }
+
+	public function kembalikan($id){
+		$M_pinjam = model("M_pinjam");
+       	$data = $M_pinjam->getDataById_p($id);
+		 // dd($data);
+        $kembalikan = [
+            
+            'id_a'        		=> $data->id_a,
+            'id_b'          	=> $data->id_b,
+            'tgl_pinjam'        => $data->tgl_pinjam,
+            'tgl_kembali'       => $data->tgl_kembali,
+            'tgl_dikembalikan'  => date('Y-m-d')
+		];
+
+		$M_kembali= model('M_kembali');
+
+		
+		$query = $M_kembali->insert($kembalikan);
+		
+       // $query = $this->db->insert('pengembalian', $kembalikan);
+		//$query =  $M_kembali->insert($kembalikan);
+        if ($query = true){
+            $delete = $M_pinjam->deletePm($id);
+            if ($delete = true){
+               // $this->session->set_flashdata('info', 'Buku Berhasil Dikembalikan');
+			   return redirect()->to(base_url('/peminjaman'));
+            }
+        } 
     }
 }

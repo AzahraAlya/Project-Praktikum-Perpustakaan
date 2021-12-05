@@ -130,7 +130,7 @@
                                         </td>
                                         <td align="center">
                                            
-                                                <a href="<?= base_url('peminjaman/kembalikan')?>/<?= $pj->id_peminjaman;?>" class="btn btn-primary btn-xs" onclick="return confirm('Yakin Buku ini mau di Kembalikan ?');"> Kembalikan</a>
+                                                <a href="<?= base_url('peminjaman/kembalikan')?>/<?= $pj->id_p;?>" class="btn btn-primary btn-xs" onclick="return confirm('Yakin Buku ini mau di Kembalikan ? <?php echo '\n Anda harus bayar ='. $selisih*1000; ?>');"> Kembalikan</a>
                                         </td>
                                     </tr>
                                     <?php endforeach; ?>

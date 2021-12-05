@@ -15,27 +15,29 @@ class Pengembalian extends Migration
 				'unsigned' => true,
 				'auto_increment' => true,
 			],
-			'id_p' => [
-				'type' => 'VARCHAR',
-				'constraint' => 100,
-			],
+
 			'id_a' => [
 				'type' => 'INT',
 				'constraint' => 11,
 			],
+
 			'id_b' => [
 				'type' => 'INT',
 				'constraint' => 11,
 			],
-			'tgl_pinjam'=> [
+
+			'tgl_pinjam' => [
 				'type' => 'DATE',
 			],
+
 			'tgl_kembali' => [
 				'type' => 'DATE',
 			],
-			'tgl_kembalikan' => [
+
+			'tgl_dikembalikan' => [
 				'type' => 'DATE',
 			],
+
 			'created_at' =>[
 				'type' => 'DATETIME',
 				'null' => true

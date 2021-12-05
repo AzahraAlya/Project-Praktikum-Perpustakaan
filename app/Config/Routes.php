@@ -53,6 +53,7 @@ $routes->get('/peminjaman/tambah', 'C_Peminjaman::tambah');
 $routes->post('/peminjaman/store', 'C_Peminjaman::store');
 
 $routes->get('/pengembalian', 'C_Pengembalian::index');
+$routes->get('/peminjaman/kembalikan/(:segment)', 'C_Peminjaman::kembalikan/$1');
 
 
 /*

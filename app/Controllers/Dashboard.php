@@ -9,7 +9,11 @@ class Dashboard extends BaseController
 {
 	public function index()
 	{
-		return view('v_admin');
+		$M_anggota = model("M_anggota");
+		$data = [
+		'anggota' => $M_anggota->findAll(),
+	];
+		return view('v_admin', $data);
 	}
 
 	public function anggota()
