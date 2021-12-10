@@ -49,7 +49,6 @@
                     <span>Dashboard</span></a>
             </li>
 
-
             <!-- Divider -->
             <hr class="sidebar-divider">
 
@@ -93,45 +92,17 @@
             <button id="sidebarToggleTop" class="btn btn-link bg-transparent d-md-none rounded-circle mr-3">
                 <i class="fa fa-bars text-white"></i>
             </button>
-            </nav>
+
 
         </ul>
-
-
-
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                <!-- Topbar Navbar -->
-                <ul class="navbar-nav ml-auto">
 
-                    <!-- Nav Item - User Information -->
-                    <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline small text-capitalize">
-                                Administrator
-                            </span>
-                            <img class="img-profile rounded-circle" src="<?= base_url('assets/startbootstrap/img/avatar/user.png') ?>">
-                        </a>
-                        <!-- Dropdown - User Information -->
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Logout
-                            </a>
-                        </div>
-                    </li>
-                    <div class="topbar-divider d-none d-sm-block"></div>
-                </ul>
-            </nav>
-            <!-- End of Topbar -->
             <!-- Main Content -->
             <div id="content">
-
+                <?= $this->renderSection('content'); ?> 
             </div>
             <!-- End of Main Content -->
-
-            <?= $this->renderSection('content'); ?>
 
             <!-- Bootstrap core JavaScript-->
             <script src="/assets/startbootstrap/vendor/jquery/jquery.min.js"></script>
@@ -154,7 +125,9 @@
             <script src="/assets/startbootstrap/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
             <!-- Page level custom scripts -->
-            <script src="/assets/startbootstrap/js/demo/datatables-demo.js"></script>
+           <script src="/assets/startbootstrap/js/demo/datatables-demo.js"></script>
+        </div>
+    </div>
 
 </body>
 <?= $this->renderSection('myscript'); ?>
