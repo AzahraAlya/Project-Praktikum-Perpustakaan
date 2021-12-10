@@ -11,36 +11,31 @@
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
             <!-- Sidebar Toggle (Topbar) -->
-            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <button id="sidebarToggleTop" class="btn btn-link d-md-1 rounded-circle mr-3">
                 <i class="fa fa-bars"></i>
             </button>
 
             <!-- Topbar Search -->
 
-
             <!-- Topbar Navbar -->
             <ul class="navbar-nav ml-auto">
 
-                <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                <li class="nav-item dropdown no-arrow d-sm-none">
-                    <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-search fa-fw"></i>
+                <!-- Nav Item - User Information -->
+                <li class="nav-item dropdown no-arrow">
+                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline small text-capitalize">
+                            Administrator
+                        </span>
+                        <img class="img-profile rounded-circle" src="<?= base_url('assets/startbootstrap/img/avatar/user.png') ?>">
                     </a>
-                    <!-- Dropdown - Messages -->
-                    <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
-                        <form class="form-inline mr-auto w-100 navbar-search">
-                            <div class="input-group">
-                                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary" type="button">
-                                        <i class="fas fa-search fa-sm"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+                    <!-- Dropdown - User Information -->
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                            Logout
+                        </a>
                     </div>
                 </li>
-
                 <div class="topbar-divider d-none d-sm-block"></div>
 
                 <!-- Nav Item - User Information -->
@@ -93,16 +88,16 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                         Anggota</div>
-                                        <?php $i;?>
-                                        <?php foreach ($anggota as $i => $agt) : 
-                                            $i++;
-                                            endforeach;
-                                            ?>
+                                    <?php $i; ?>
+                                    <?php foreach ($anggota as $i => $agt) :
+                                        $i++;
+                                    endforeach;
+                                    ?>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $i; ?></div>
-            
-                                       
-                                    
-            
+
+
+
+
                                 </div>
                                 <div class="col-auto">
                                     <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -120,11 +115,11 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         Data Buku</div>
-                                        <?php $j;?>
-                                        <?php foreach ($buku as $j => $bk) : 
-                                            $j++;
-                                            endforeach;
-                                            ?>
+                                    <?php $j; ?>
+                                    <?php foreach ($buku as $j => $bk) :
+                                        $j++;
+                                    endforeach;
+                                    ?>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $j; ?></div>
                                 </div>
                                 <div class="col-auto">
@@ -143,17 +138,17 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Peminjaman
                                     </div>
-                                    <?php $k;?>
-                                        <?php foreach ($pinjam as $k => $pj) : 
-                                            $k++;
-                                            endforeach;
-                                            ?>
+                                    <?php $k; ?>
+                                    <?php foreach ($pinjam as $k => $pj) :
+                                        $k++;
+                                    endforeach;
+                                    ?>
                                     <div class="row no-gutters align-items-center">
                                         <div class="col-auto">
                                             <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?= $k; ?></div>
                                         </div>
                                         <div class="col-auto">
-                                            
+
                                         </div>
                                     </div>
                                 </div>
@@ -173,11 +168,11 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                         Pengembalian</div>
-                                        <?php $l;?>
-                                        <?php foreach ($kembali as $l => $km) : 
-                                            $l++;
-                                            endforeach;
-                                            ?>
+                                    <?php $l; ?>
+                                    <?php foreach ($kembali as $l => $km) :
+                                        $l++;
+                                    endforeach;
+                                    ?>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $l; ?></div>
                                 </div>
                                 <div class="col-auto">
@@ -188,9 +183,9 @@
                     </div>
                 </div>
                 <div class="bodyx">
-                    <div class="divx">Selamat Datang</div> 
-                    <div class = "divx"> 
-                    <span class ="spanx">Sistem Perpustakaan</span>
+                    <div class="divx">Selamat Datang</div>
+                    <div class="divx">
+                        <span class="spanx">Sistem Perpustakaan</span>
                     </div>
                 </div>
             </div>
