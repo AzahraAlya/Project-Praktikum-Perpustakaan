@@ -76,29 +76,26 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-            <!-- Page Heading -->
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Pengembalian</h1>
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Pengembalian</h1>
 
-            </div>
-            <!-- /.content-header -->
-            <div class="container">
-                <div class="card mt-3">
-                    <div class="card-header">
-                        Data Peminjaman
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-striped text-center">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">NO</th>
-                                        <th scope="col">Peminjam</th>
-                                        <th scope="col">Judul Buku</th>
-                                        <th scope="col">Tanggal Pinjam</th>
-                                        <th scope="col">Tanggal Kembali</th>
-                                        <th scope="col">Tanggal Pengembalian</th>
-                                    </tr>
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Data Pengembalian</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Peminjam</th>
+                                            <th>Judul Buku</th>
+                                            <th>Tanggal Pinjam</th>
+                                            <th>Tanggal Kembali</th>
+                                            <th>Tanggal Pengembalian</th>
+                                        </tr>
                                 </thead>
                                 <tbody>
                                 <?php foreach ($kembali as $i => $km) : 
