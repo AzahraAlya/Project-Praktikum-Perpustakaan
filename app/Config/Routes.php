@@ -33,6 +33,8 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 
 $routes->get('/', 'AuthController::index');
+$routes->get('/register', 'AuthController::register');
+
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/anggota', 'Dashboard::anggota');
 $routes->get('/anggota/tambah', 'Dashboard::tambah');

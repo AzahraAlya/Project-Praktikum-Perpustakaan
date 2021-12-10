@@ -11,4 +11,10 @@ class AuthController extends BaseController
 		$data['title'] = "Login Application";
 		return view('auth/login', $data);
 	}
+
+	public function register()
+	{
+		$data['title'] = "Register Application";
+		return view('auth/register', $data);
+	}
 }
