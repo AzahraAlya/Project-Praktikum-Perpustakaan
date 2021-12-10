@@ -89,31 +89,71 @@
                 </div>
             </li>
         </ul>
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
 
-        <?= $this->renderSection('content'); ?>
+            <!-- Main Content -->
+            <div id="content">
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="/assets/startbootstrap/vendor/jquery/jquery.min.js"></script>
-        <script src="/assets/startbootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-dark bg-primary topbar mb-4 static-top shadow-sm">
 
-        <!-- Core plugin JavaScript-->
-        <script src="/assets/startbootstrap/vendor/jquery-easing/jquery.easing.min.js"></script>
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link bg-transparent d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars text-white"></i>
+                    </button>
 
-        <!-- Custom scripts for all pages-->
-        <script src="/assets/startbootstrap/js/sb-admin-2.min.js"></script>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
 
-        <!-- Page level plugins -->
-        <script src="/assets/startbootstrap/vendor/chart.js/Chart.min.js"></script>
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline small text-capitalize">
+                                    Administrator
+                                </span>
+                                <img class="img-profile rounded-circle" src="<?= base_url('assets/startbootstrap/img/avatar/user.png') ?>">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
 
-        <!-- Page level custom scripts -->
-        <script src="/assets/startbootstrap/js/demo/chart-area-demo.js"></script>
-        <script src="/assets/startbootstrap/js/demo/chart-pie-demo.js"></script>
+                </nav>
+                <!-- End of Topbar -->
 
-        <script src="/assets/startbootstrap/vendor/datatables/jquery.dataTables.min.js"></script>
-        <script src="/assets/startbootstrap/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+            </div>
+            <!-- End of Main Content -->
 
-    <!-- Page level custom scripts -->
-    <script src="/assets/startbootstrap/js/demo/datatables-demo.js"></script>
+            <?= $this->renderSection('content'); ?>
+
+            <!-- Bootstrap core JavaScript-->
+            <script src="/assets/startbootstrap/vendor/jquery/jquery.min.js"></script>
+            <script src="/assets/startbootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+            <!-- Core plugin JavaScript-->
+            <script src="/assets/startbootstrap/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+            <!-- Custom scripts for all pages-->
+            <script src="/assets/startbootstrap/js/sb-admin-2.min.js"></script>
+
+            <!-- Page level plugins -->
+            <script src="/assets/startbootstrap/vendor/chart.js/Chart.min.js"></script>
+
+            <!-- Page level custom scripts -->
+            <script src="/assets/startbootstrap/js/demo/chart-area-demo.js"></script>
+            <script src="/assets/startbootstrap/js/demo/chart-pie-demo.js"></script>
+
+            <script src="/assets/startbootstrap/vendor/datatables/jquery.dataTables.min.js"></script>
+            <script src="/assets/startbootstrap/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+            <!-- Page level custom scripts -->
+            <script src="/assets/startbootstrap/js/demo/datatables-demo.js"></script>
 
 </body>
 <?= $this->renderSection('myscript'); ?>
