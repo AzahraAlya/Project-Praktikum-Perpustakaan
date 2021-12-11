@@ -74,7 +74,7 @@
                             <hr>
                            
                             <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+                                <a class="small" href="/">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>

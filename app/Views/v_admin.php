@@ -65,7 +65,7 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                         Anggota</div>
-                                    <?php $i; ?>
+                                    <?php $i=0; ?>
                                     <?php foreach ($anggota as $i => $agt) :
                                         $i++;
                                     endforeach;
@@ -92,7 +92,7 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                         Data Buku</div>
-                                    <?php $j; ?>
+                                    <?php $j=0; ?>
                                     <?php foreach ($buku as $j => $bk) :
                                         $j++;
                                     endforeach;
@@ -115,7 +115,7 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Peminjaman
                                     </div>
-                                    <?php $k; ?>
+                                    <?php $k=0; ?>
                                     <?php foreach ($pinjam as $k => $pj) :
                                         $k++;
                                     endforeach;
@@ -145,7 +145,7 @@
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                         Pengembalian</div>
-                                    <?php $l; ?>
+                                    <?php $l=0; ?>
                                     <?php foreach ($kembali as $l => $km) :
                                         $l++;
                                     endforeach;
