@@ -47,16 +47,21 @@
                                         <h1 class="h4 text-gray-900">Sistem Perpustakaan</h1>
                                         <span class="text-muted">Login Application</span>
                                     </div>
-                                    <form class="user">
+                                    <?php if (session()->get('pesan')) : ?>
+                                        <div class="alert alert-success" role="alert">
+                                            <?= session()->get('pesan') ?>
+                                        </div>
+                                    <?php endif; ?>
+                                    <form class="user" action = "/saveLogin" method="post">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username">
+                                            <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username" name="username">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                                            <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
                                         </div>
-                                        <a href="/dashboard" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                        </a>
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="fas fa-paper-plane"></i> Login
+                                        </button>
                                     </form>
                                     <hr>
                                     <div class="text-center">

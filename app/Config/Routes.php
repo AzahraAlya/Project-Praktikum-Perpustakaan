@@ -34,6 +34,9 @@ $routes->setAutoRoute(true);
 
 $routes->get('/', 'AuthController::index');
 $routes->get('/register', 'AuthController::register');
+$routes->post('/saveRegister', 'AuthController::saveRegister');
+$routes->post('/saveLogin', 'AuthController::saveLogin');
+$routes->get('/logout', 'AuthController::logout');
 
 $routes->get('/dashboard', 'Dashboard::index');
 $routes->get('/anggota', 'Dashboard::anggota');

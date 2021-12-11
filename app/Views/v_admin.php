@@ -30,10 +30,10 @@
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                            Logout
-                        </a>
+                           <a class="dropdown-item" href="/logout" data-toggle="modal" data-target="#logoutModal">
+                              <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                              Logout
+                          </a>
                     </div>
                 </li>
                 <div class="topbar-divider d-none d-sm-block"></div>
@@ -51,8 +51,16 @@
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                <a href="/logout">
+                    logout
+                </a>
 
             </div>
+            <?php if (session()->get('pesan')) : ?>
+                <div class="alert alert-success" role="alert">
+                    <?= session()->get('pesan') ?>
+                </div>
+            <?php endif; ?>
 
             <!-- Content Row -->
             <div class="row">
