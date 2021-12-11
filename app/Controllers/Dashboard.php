@@ -29,6 +29,8 @@ class Dashboard extends BaseController
 		// session();
 		$data = [
 			'anggota' => $M_anggota->findAll(),
+			// 'anggota' => $M_anggota->paginate(5),
+			// 'pager' => $M_anggota->pager,
 			'validation' => \Config\Services::validation(),
 
 		];

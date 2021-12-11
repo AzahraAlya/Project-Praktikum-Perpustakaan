@@ -20,10 +20,11 @@ class M_buku extends Model
 		->orderBy('kode_buku', 'DESC')
 		->limit(1)->get()->getRowArray();
 
-		if($kode['kode_buku']==null){
+		$kode_buku = isset($kode['kode_buku']) ? $kode['kode_buku'] : '';
+		if($kode_buku == null){
 			$no = 1;
 		}else{
-			$no = intval($kode['kode_buku']) + 1;
+			$no = intval($kode_buku) + 1;
 		}
 
 		$tgl = 'BK';

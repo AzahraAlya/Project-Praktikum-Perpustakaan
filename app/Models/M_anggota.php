@@ -19,11 +19,11 @@ class M_anggota extends Model
 		->select('RIGHT(id_anggota,3) as id_anggota', false)
 		->orderBy('id_anggota', 'DESC')
 		->limit(1)->get()->getRowArray();
-
-		if($kode['id_anggota']==null){
+    $kode_anggota = isset($kode['id_anggota']) ? $kode['id_anggota'] : '';
+		if($kode_anggota ==null){
 			$no = 1;
 		}else{
-			$no = intval($kode['id_anggota']) + 1;
+			$no = intval($kode_anggota) + 1;
 		}
 
 		$tgl = 'AB';

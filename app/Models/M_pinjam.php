@@ -28,10 +28,13 @@ class M_pinjam extends Model
 		->orderBy('id_peminjaman', 'DESC')
 		->limit(1)->get()->getRowArray();
 
-		if($kode['id_peminjaman']==null){
+		$kode_peminjaman = isset($kode['id_peminjaman']) ? $kode['id_peminjaman'] : '';
+
+
+		if($kode_peminjaman == null){
 			$no = 1;
 		}else{
-			$no = intval($kode['id_peminjaman']) + 1;
+			$no = intval($kode_peminjaman) + 1;
 		}
 
 		$tgl = 'PM';
