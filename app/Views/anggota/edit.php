@@ -12,7 +12,7 @@
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
             <!-- Sidebar Toggle (Topbar) -->
-            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <button id="sidebarToggleTop" class="btn btn-link d-md-1 rounded-circle mr-3">
                 <i class="fa fa-bars"></i>
             </button>
 
@@ -71,7 +71,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Nama</label>
-                                <input type="text" class="form-control" id= "nama" name = "nama" autofocus value="<?= $anggota['nama']; ?>">
+                                <input type="text" class="form-control" id= "nama" name = "nama" autofocus value="<?= $anggota['nama']; ?>" required>
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Jenis Kelamin</label>
@@ -91,12 +91,12 @@
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Alamat</label>
-                                <input type="text" class="form-control" id= "alamat" name = "alamat" autofocus value="<?= $anggota['alamat']; ?>">
+                                <input type="text" class="form-control" id= "alamat" name = "alamat" autofocus value="<?= $anggota['alamat']; ?>" required>
                                 
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">No. HP</label>
-                                <input type="text" class="form-control" id= "no_hp" name = "no_hp" autofocus value="<?= $anggota['no_hp']; ?>">
+                                <input type="text" class="form-control" id= "no_hp" name = "no_hp" autofocus value="<?= $anggota['no_hp']; ?>" required>
                             </div>
 
                             <button type="submit" class="btn btn-primary">

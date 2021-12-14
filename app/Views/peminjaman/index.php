@@ -79,7 +79,7 @@
                                         $tgl_kembali = new DateTime($pj->tgl_kembali);
                                         $tgl_sekarang = new DateTime();
                                         $selisih = $tgl_sekarang->diff($tgl_kembali)->format("%a");
-                                        $selisahKembali = $tgl_kembali->diff($tgl_sekarang)->format("%a") - 6;
+                                        $selisahKembali = $tgl_sekarang->diff($tgl_kembali)->format("%a");
                                         
                                     ?> 
                                     <tr>
@@ -101,7 +101,7 @@
                                         </td>
                                         <td align="center">
                                            
-                                                <a href="<?= base_url('peminjaman/kembalikan')?>/<?= $pj->id_p;?>" class="btn btn-primary btn-xs" onclick="return confirm('Yakin Buku ini mau di Kembalikan ? <?php echo '\n Anda harus bayar ='. $selisahKembali*1000; ?>');"> Kembalikan</a>
+                                        <a href="<?= base_url('peminjaman/kembalikan')?>/<?= $pj->id_p;?>" class="btn btn-primary btn-xs" onclick="return confirm('Yakin Buku ini mau di Kembalikan ? <?php if($tgl_kembali >= $tgl_sekarang OR $selisih == 0){ echo '\n Anda harus bayar = 0';} else{ echo '\n Anda harus bayar ='. $selisahKembali*1000;} ?>');"> Kembalikan</a>
                                         </td>
                                     </tr>
                                     <?php endforeach; ?>

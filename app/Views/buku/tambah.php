@@ -12,7 +12,7 @@
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
 <!-- Sidebar Toggle (Topbar) -->
-            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+<button id="sidebarToggleTop" class="btn btn-link d-md-1 rounded-circle mr-3">
                 <i class="fa fa-bars"></i>
             </button>
 
@@ -70,19 +70,19 @@
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Judul Buku</label>
-                                <input type="text" class="form-control" name="judul_buku">
+                                <input type="text" class="form-control" name="judul_buku" required>
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Penulis</label>
-                                <input type="text" class="form-control" name="penulis">
+                                <input type="text" class="form-control" name="penulis" required>
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Penerbit</label>
-                                <input type="text" class="form-control" name="penerbit">
+                                <input type="text" class="form-control" name="penerbit" required>
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Tahun Terbit</label>
-                                <input type="text" class="form-control" name="thn_terbit">
+                                <input type="text" class="form-control" name="thn_terbit" required>
                             </div>
 
                             <button type="submit" class="btn btn-primary">

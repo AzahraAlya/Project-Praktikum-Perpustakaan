@@ -41,8 +41,8 @@ class AuthController extends BaseController
 						'is_unique' => '{field} sudah dipakai'
 					]],
 				'password' => 'required',
-			],
-		);
+			]
+					);
 
 		if(!$val){
 			$pesanvalidasi = \Config\Services::validation();
